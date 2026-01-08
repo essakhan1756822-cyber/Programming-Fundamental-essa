@@ -2,7 +2,6 @@
 using namespace std;
 
 int main() {
-    // Dummy account data (only one account for simplicity)
     string accountNumber = "003161756822";
     string pin = "1122";
     double balance = 1000.0;
@@ -10,8 +9,6 @@ int main() {
     string inputAcc, inputPin;
     int choice;
     double amount;
-
-    // Login
     cout << "=== ATM Machine ===\n";
     cout << "Enter Account Number: ";
     cin >> inputAcc;
@@ -22,8 +19,6 @@ int main() {
         cout << "Invalid Account Number or PIN!\n";
         return 0;
     }
-
-    // Menu Loop
     while (true) {
         cout << "\n1. Check Balance\n";
         cout << "2. Withdraw Money\n";
@@ -33,11 +28,11 @@ int main() {
         cin >> choice;
 
         switch (choice) {
-            case 1: // Check Balance
+            case 1: 
                 cout << "Your balance: $" << balance << endl;
                 break;
 
-            case 2: // Withdraw Money
+            case 2: 
                 cout << "Enter amount to withdraw: ";
                 cin >> amount;
                 if (amount > balance) {
@@ -50,7 +45,7 @@ int main() {
                 }
                 break;
 
-            case 3: // Deposit Money
+            case 3: 
                 cout << "Enter amount to deposit: ";
                 cin >> amount;
                 if (amount <= 0) {
@@ -61,7 +56,7 @@ int main() {
                 }
                 break;
 
-            case 4: // Exit
+            case 4: 
                 cout << "Thank you for using the ATM. Goodbye!\n";
                 return 0;
 
